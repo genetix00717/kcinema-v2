@@ -1,0 +1,6 @@
+{
+  "name": "K Cinema",
+  "description": "Responsive movie information and streaming hub powered by TMDB API with a dedicated Admin Panel for publishing custom movie posts, embedded video playback, and rich HTML reviews.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

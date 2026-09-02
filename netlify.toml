@@ -1,0 +1,10 @@
+# Netlify configuration file for CineAI
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# SPA redirect rule - ensure client-side routing works smoothly
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
