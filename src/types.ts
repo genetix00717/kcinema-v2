@@ -85,3 +85,28 @@ export interface AdminSettings {
   }>;
   customMovies: Movie[];
 }
+
+export interface MovieReview {
+  id: string;
+  movieId?: number | string;
+  movieTitle: string;
+  year?: string;
+  posterUrl?: string;
+  backdropUrl?: string;
+  genre?: string;
+  director?: string;
+  imdbRating?: string;
+  imdbVotes?: string;
+  authorName: string;
+  authorRole: string;
+  authorAvatar?: string;
+  headline: string;
+  verdict: 'Masterpiece' | 'Must Watch' | 'Highly Recommended' | 'Entertaining' | 'Flawed';
+  ratingScore: number;
+  contentHtml: string;
+  summary: string;
+  pros: string[];
+  cons: string[];
+  createdAt: string;
+  isAiGenerated: boolean;
+}

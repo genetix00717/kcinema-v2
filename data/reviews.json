@@ -1,0 +1,89 @@
+[
+  {
+    "id": "rev-dune-2",
+    "movieTitle": "Dune: Part Two",
+    "year": "2024",
+    "posterUrl": "https://image.tmdb.org/t/p/w780/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s520b4q.jpg",
+    "genre": "Sci-Fi / Adventure / Drama",
+    "director": "Denis Villeneuve",
+    "imdbRating": "8.5/10",
+    "imdbVotes": "595,210",
+    "authorName": "Julian Vance",
+    "authorRole": "Senior Film Essayist",
+    "authorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "headline": "Visceral, unyielding, and mathematically precise: Why Dune Part Two redefines modern cinematic science fiction",
+    "verdict": "Masterpiece",
+    "ratingScore": 9.4,
+    "summary": "Denis Villeneuve expands Frank Herbert's sprawling mythology with breathtaking desert scale, ferocious sound engineering, and a chillingly tragic study of religious radicalization.",
+    "contentHtml": "\n      <h3>The Architecture of Scale</h3>\n      <p>Where most contemporary blockbusters drown in flat green-screen sludge, Denis Villeneuve and cinematographer Greig Fraser treat the sands of Arrakis with tactile reverence. Every gust of dust feels charged with ozone; every monolithic Harkonnen architecture looms like an ancient brutalist nightmare.</p>\n      \n      <blockquote>\"Denis Villeneuve does not merely film a desert; he renders the desert into an indifferent, godlike entity that consumes souls and crowns conquerors.\"</blockquote>\n\n      <h3>Performances & Moral Decay</h3>\n      <p>Timothée Chalamet abandons any youthful fragility to capture Paul Atreides' inevitable descent into holy war, perfectly contrasted by Zendaya's Chani, who serves as the film's beating human conscience. Austin Butler's monochromatic gladiator sequence in Giedi Prime injects terrifying feral menace into the narrative pulse.</p>\n\n      <h3>Sound & The Zimmer Hammer</h3>\n      <p>Hans Zimmer's score strips away conventional orchestral melodics in favor of bagpipes, throat singing, and visceral low-frequency rumbles that physically rattle the theater floor. Combined with masterclass Dolby Atmos pacing, <em>Dune: Part Two</em> demands and rewards theatrical immersion.</p>\n    ",
+    "pros": [
+      "Monumental Arri Alexa LF 1.43:1 IMAX cinematography",
+      "Terrifyingly nuanced character transformation by Timothée Chalamet",
+      "Transcendent sound design and Hans Zimmer acoustic score"
+    ],
+    "cons": [
+      "Rapid third-act climax leaves several political treaties slightly condensed"
+    ],
+    "createdAt": "2026-09-03T03:59:10.660Z",
+    "isAiGenerated": true
+  },
+  {
+    "id": "rev-oppenheimer",
+    "movieTitle": "Oppenheimer",
+    "year": "2023",
+    "posterUrl": "https://image.tmdb.org/t/p/w780/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/rLb2cw69zbHgIwg6KiFMUtMN9fk.jpg",
+    "genre": "Biography / Drama / History",
+    "director": "Christopher Nolan",
+    "imdbRating": "8.9/10",
+    "imdbVotes": "812,450",
+    "authorName": "Elena Rostova",
+    "authorRole": "Contributing Cinema Critic",
+    "authorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    "headline": "A harrowing symphony of ego and fallout: Nolan crafts an atomic psychological thriller in 70mm",
+    "verdict": "Masterpiece",
+    "ratingScore": 9.3,
+    "summary": "Cillian Murphy gives the performance of a lifetime as J. Robert Oppenheimer in a 3-hour dialogue-driven tempest that operates with the velocity of a suspense thriller.",
+    "contentHtml": "\n      <h3>Tension as Pure Kinetic Energy</h3>\n      <p>Christopher Nolan constructs <em>Oppenheimer</em> not as a standard biographical cradle-to-grave chronicle, but as a fractured, accelerating chamber thriller. The ticking clock isn't merely the Trinity Test; it is the slow, agonizing realization that humanity has constructed the tools of its own oblivion.</p>\n\n      <h3>The Haunting Face of Cillian Murphy</h3>\n      <p>Murphy's piercing translucent eyes become the film's true landscape. Behind every cigarette drag and polite academic smile lies a mind fracturing under the weight of catastrophic mathematics. Robert Downey Jr.'s venomous Lewis Strauss provides the perfect Shakespearean foil in black-and-white 65mm film.</p>\n\n      <h3>Ludwig Göransson's Anxious Metronome</h3>\n      <p>The violins oscillate between breathless excitement and shrill terror, eschewing percussion until the very moment of detonation. It is a masterpiece of historical dread.</p>\n    ",
+    "pros": [
+      "Career-defining performance from Cillian Murphy",
+      "The Trinity countdown is a masterclass in tension and silence",
+      "Ludwig Göransson's propulsive, anxiety-inducing score"
+    ],
+    "cons": [
+      "Dense congressional deposition sequences require high viewer concentration"
+    ],
+    "createdAt": "2026-09-03T02:59:10.660Z",
+    "isAiGenerated": true
+  },
+  {
+    "id": "rev-interstellar",
+    "movieTitle": "Interstellar",
+    "year": "2014",
+    "posterUrl": "https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/rAiYTsqBkKcqCRiH41wRcrg2x5.jpg",
+    "genre": "Sci-Fi / Adventure / Drama",
+    "director": "Christopher Nolan",
+    "imdbRating": "8.7/10",
+    "imdbVotes": "2,140,800",
+    "authorName": "Marcus Sterling",
+    "authorRole": "Chief Cultural Essayist",
+    "authorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    "headline": "Ten years later: How Interstellar turned astrophysics into a soaring monument to human love",
+    "verdict": "Masterpiece",
+    "ratingScore": 9.2,
+    "summary": "A decade after its premiere, Christopher Nolan's deep-space epic remains unmatched in its fusion of rigorous general relativity and raw father-daughter heartbreak.",
+    "contentHtml": "\n      <h3>The Church of the Pipe Organ</h3>\n      <p>Hans Zimmer recorded on the 1926 Harrison & Harrison organ in London's Temple Church, yielding a sound that feels both ancient and cosmic. When the organ swells as the Endurance spins helplessly against the frozen clouds of Mann's planet, cinema achieves pure transcendent awe.</p>\n\n      <h3>Emotional Gravity</h3>\n      <p>Matthew McConaughey's breakdown watching twenty-three years of video logs in silence remains one of the rawest acting moments in modern blockbusters. It anchors the film's astronomical scale to an intimate heartbeat.</p>\n    ",
+    "pros": [
+      "Kip Thorne-verified black hole and gravitational lensing physics",
+      "Endurance docking sequence is one of cinema's greatest set pieces",
+      "Devastating emotional core between Cooper and Murph"
+    ],
+    "cons": [
+      "Some technical exposition in the first 30 minutes is delivered at breakneck speed"
+    ],
+    "createdAt": "2026-09-03T01:49:10.660Z",
+    "isAiGenerated": true
+  }
+]

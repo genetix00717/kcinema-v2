@@ -16,12 +16,15 @@ import {
   fetchMovies, 
   getAdminSettings, 
   saveAdminSettings, 
+  getAllCatalogMovies
 } from './services/movieService';
 import { fetchPosts } from './services/postService';
 import { POPULAR_SEARCH_TAGS } from './utils/searchEngine';
 import { Navbar } from './components/Navbar';
 import { HeroBanner } from './components/HeroBanner';
 import { WatchMoviesSection } from './components/WatchMoviesSection';
+import { MovieSuggestionsSection } from './components/MovieSuggestionsSection';
+import { MovieReviewsSection } from './components/MovieReviewsSection';
 import { WatchMovieModal } from './components/WatchMovieModal';
 import { MovieCard } from './components/MovieCard';
 import { GenreFilterBar } from './components/GenreFilterBar';
@@ -32,7 +35,7 @@ import { NetlifyGuideModal } from './components/NetlifyGuideModal';
 
 export default function App() {
   // Navigation & Filter States
-  const [activeTab, setActiveTab] = useState<'trending' | 'top_rated' | 'upcoming' | 'watch_movies'>('trending');
+  const [activeTab, setActiveTab] = useState<'reviews' | 'top_rated' | 'upcoming' | 'watch_movies' | 'suggestions'>('reviews');
   const [selectedGenreId, setSelectedGenreId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -183,6 +186,14 @@ export default function App() {
             // Scroll to watch movies
             const el = document.getElementById('watch-movies-section');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
+          } else if (tab === 'suggestions') {
+            // Scroll to movie suggestions
+            const el = document.getElementById('movie-suggestions-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          } else if (tab === 'reviews') {
+            // Scroll to movie reviews
+            const el = document.getElementById('movie-reviews-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
           }
         }}
         searchQuery={searchQuery}
@@ -231,6 +242,39 @@ export default function App() {
         onOpenAdmin={() => {
           setEditingPostForAdmin(null);
           setIsAdminModalOpen(true);
+        }}
+      />
+
+      {/* 3.5. "Movie Suggestions" Section (Smart AI Cinema Matcher & Lucky Pick) */}
+      <MovieSuggestionsSection
+        allMovies={movies.length > 0 ? movies : getAllCatalogMovies()}
+        onSelectMovie={(m) => setSelectedMovieForDetails(m)}
+        onPlayTrailer={(m) => setSelectedMovieForTrailer(m)}
+      />
+
+      {/* 3.6. "Movie Reviews" Section (AI-written human-like reviews updated every 30 mins with IMDb ratings) */}
+      <MovieReviewsSection
+        onSelectMovie={(movieTitle) => {
+          const catalog = movies.length > 0 ? movies : getAllCatalogMovies();
+          const found = catalog.find(m => m.title.toLowerCase().includes(movieTitle.toLowerCase()));
+          if (found) {
+            setSelectedMovieForDetails(found);
+          } else {
+            setSearchQuery(movieTitle);
+            const el = document.getElementById('explore-movies-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+        onPlayTrailer={(movieTitle) => {
+          const catalog = movies.length > 0 ? movies : getAllCatalogMovies();
+          const found = catalog.find(m => m.title.toLowerCase().includes(movieTitle.toLowerCase()));
+          if (found) {
+            setSelectedMovieForTrailer(found);
+          } else {
+            setSearchQuery(movieTitle);
+            const el = document.getElementById('explore-movies-section');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }
         }}
       />
 

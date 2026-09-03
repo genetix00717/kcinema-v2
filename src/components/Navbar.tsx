@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { Film, Search, X, PlayCircle, Flame, Star, Sparkles, ArrowRight } from 'lucide-react';
+import { Film, Search, X, PlayCircle, Star, Sparkles, ArrowRight, BookOpen, Flame } from 'lucide-react';
 import { Movie, AdminSettings } from '../types';
 import { POPULAR_SEARCH_TAGS, getLiveSearchSuggestions } from '../utils/searchEngine';
 import { getAllCatalogMovies } from '../services/movieService';
@@ -9,8 +9,8 @@ interface NavbarProps {
   onSearchChange: (query: string) => void;
   onSearchSubmit?: (query: string) => void;
   onSelectMovie?: (movie: Movie) => void;
-  activeTab: 'trending' | 'top_rated' | 'upcoming' | 'watch_movies';
-  onSelectTab: (tab: 'trending' | 'top_rated' | 'upcoming' | 'watch_movies') => void;
+  activeTab: 'reviews' | 'top_rated' | 'upcoming' | 'watch_movies' | 'suggestions';
+  onSelectTab: (tab: 'reviews' | 'top_rated' | 'upcoming' | 'watch_movies' | 'suggestions') => void;
   onOpenAdmin: () => void;
   onOpenNetlifyGuide?: () => void;
   onOpenTmdbSettings?: () => void;
@@ -57,9 +57,10 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const navItems: { id: 'watch_movies' | 'trending' | 'top_rated' | 'upcoming'; label: string; icon: any; badge?: string; highlight?: boolean }[] = [
+  const navItems: { id: 'watch_movies' | 'suggestions' | 'reviews' | 'top_rated' | 'upcoming'; label: string; icon?: any; badge?: string; highlight?: boolean }[] = [
     { id: 'watch_movies', label: 'Watch Movies', icon: PlayCircle, badge: watchMoviesCount > 0 ? `${watchMoviesCount}` : undefined, highlight: true },
-    { id: 'trending', label: 'Trending', icon: Flame },
+    { id: 'suggestions', label: 'Movie Suggestions' },
+    { id: 'reviews', label: 'Movie Reviews', icon: BookOpen },
     { id: 'top_rated', label: 'Top Rated', icon: Star },
     { id: 'upcoming', label: 'Upcoming', icon: Film },
   ];
@@ -290,7 +291,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                         : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900'
                   }`}
                 >
-                  <Icon className="w-3.5 h-3.5" />
+                  {Icon && <Icon className="w-3.5 h-3.5" />}
                   <span>{item.label}</span>
                   {item.badge && (
                     <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-bold ${
@@ -412,7 +413,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     : 'bg-zinc-900 text-zinc-400 hover:text-zinc-200 border border-zinc-800'
                 }`}
               >
-                <Icon className="w-3 h-3" />
+                {Icon && <Icon className="w-3 h-3" />}
                 <span>{item.label}</span>
                 {item.badge && <span className="text-[10px]">({item.badge})</span>}
               </button>
